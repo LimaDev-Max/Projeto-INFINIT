@@ -1,65 +1,35 @@
-function x() {
-    let select = document.querySelector('#modo')
-    let optionValue = select.options[select.selectedIndex]
-    let value = Number(optionValue.value)
-
-    console.log(value)
-}
-let escolhaDoCliente = 3
-let entradaInicial = 2
-let proximaEntrada;
-let taxa;
-let resultado = document.getElementById('px')
-let contador = 0
-
-/*
------------------------------------------
-BOTOES WIN E LOSS
-*/
-let acertouOuErrou;
-let win = document.getElementById('v')
-win.addEventListener('click', v)
-function v() {
-    if (win.value === 'WIN') {
-        alert('Acertou')
-        acertouOuErrou = true
-        proximaEntrada = entradaInicial.toFixed(2)
-        resultado.innerText = proximaEntrada
-        contador = 0
+const gerenciamento = document.getElementById('gerenciamento')
+const modo = document.getElementById('modo')
+const proximo = document.getElementById('proximo')
+const modoDiv = document.getElementById('modoDiv')
+const taxas = [
+    {
+        "DAMABRANCO": [0.1142, 0.1344, 0.1499],
+        "CRASH5": [0.1535, 0.1635, 0.1785],
+        "CRASH10": [0.1035, 0.1235, 0.1375],
+        "CRASH25": [0.905, 0.1085, 0.1187]
     }
-}
+]
 
 
-let loss = document.getElementById('y')
-loss.addEventListener('click', y)
-function y() {
-    if (loss.value === 'LOSS') {
-        contador++
-        window.alert('ERROU ' + contador)
-        acertouOuErrou = false
-        if (acertouOuErrou === false) {
+const rGerenciamento = gerenciamento.addEventListener("change", e => {
+    modoDiv.style.display = "block"
+    const value = e.target.value
+})
 
-            if (escolhaDoCliente >= 1) {
-                if (escolhaDoCliente === 1) {
-                    taxa = 11.33 / 100
-                    proximaEntrada = (entradaInicial * taxa) + entradaInicial
-                    resultado.innerText = proximaEntrada.toFixed(2)
-                }
-                else if (escolhaDoCliente === 2) {
-                    taxa = 13.34 / 100
-                    proximaEntrada = (entradaInicial * taxa) + entradaInicial
-                    resultado.innerText = proximaEntrada.toFixed(2)
-                }
-                else if (escolhaDoCliente === 3) {
-                    taxa = 14.99 / 100
-                    proximaEntrada = (entradaInicial * taxa) + entradaInicial
-                    resultado.innerText = proximaEntrada.toFixed(2)
-                }
-            }
-        }
-    }
-}
+console.log(taxas[0].DAMABRANCO);
 
+proximo.addEventListener("click", (e) => {
+    e.preventDefault()
+    const vGerenciamento = gerenciamento.value
+    const vModo = modo.value
+    const resultado = taxas[0]
+    console.log(vGerenciamento,
+        vModo)
+    console.log(resultado.vGerenciamento)
+})
 
-
-
+modo.addEventListener("change", e => {
+    const value = e.target.value
+    return value
+})

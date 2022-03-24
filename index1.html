@@ -4,26 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>INFINIT</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <input type="number" placeholder="BANCA INICIAL">
+    <br>
+    <br>
+    <form action="/index2.html" method="get">
+        GERNCIAMENTO:
+        <select name="gerenciemento" id="gerenciamento">
+            <option disabled selected>Selecione Um Gerenciamento</option>
+            <option value="DAMABRANCO">DAMA BRANCO</option>
+            <option value="CRASH5">CRASH VELA 5X</option>
+            <option value="CRASH10">CRASH VELA 10X</option>
+            <option value="CRASH25">CRASH VELA 25X</option>
+        </select>
+        <hr>
+        <div id="modoDiv" style="display: none;">
+            Modo:
+            <select name="modo" id="modo">
+                <option disabled selected>Selecione um Modo</option>
+                <option value="0">Conservador</option>
+                <option value="1">Moderado</option>
+                <option value="2">Agressivo</option>
+            </select>
+        </div>
+        
+        <br><br>
+        <button type="submit" id="proximo"> proximo</button>
+    </form>
     <script src="script.js"></script>
-    <h3>Digite sua banca inicial <input type="number"></h3
-        >
-    <select id="gerenciamento" onchange="k(this.value)">
-        <option value="">Escolha um Gerenciamento</option>
-        <option value="DAMABRANCO">DAMA BRANCO</option>
-        <option value="CRASH5">CRASH VELA 5X</option>
-        <option value="CRASH10">CRASH VELA 10X</option>
-        <option value="CRASH25">CRASH VELA 25X</option>
-        <option value="DOUBLE">DOUBLE RED/BLACK</option>
-    </select>
-    <select id="modo" onchange="x(this.value)">
-        <option>Selecione o modo</option>
-        <option value="1">Conservador</option>
-        <option value="2">Moderado</option>
-        <option value="3">Agressivo</option>
-    </select>
-    <a href="index2.html"><input type="button" value="proximo" id="proximo"></a>
 </body>
 </html>
