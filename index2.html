@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,20 +8,43 @@
     <title>INFINIT</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <h1>INFINIT</h1>
-<div class="btn">
-    <input type="button" value="WIN" id="v">
-    <input type="button" value="LOSS" id="y">
-</div>
+    <div class="btn">
+        <input type="button" value="WIN" id="v">
+        <input type="button" value="LOSS" id="y">
+    </div>
 
-<h4 id="resultado">Resultado</h4>
+    <h4 id="resultado">Resultado</h4>
 
-<div class="back">
+    <div class="back">
 
-    <a href="index1.html"><img src="img/favicon-32x32.png" alt=""></a>
-</div>
+        <a href="index1.html"><img src="img/favicon-32x32.png" alt=""></a>
+    </div>
 
-<script src="script.js"></script>
+    <script>
+        const win = document.getElementById("v")
+        const loss = document.getElementById("y")
+        const data = window.location.search
+        const taxa = data.split("?")[1]
+            .split("=")[1]
+
+        let resultado = 0
+
+        win.addEventListener("click", e =>{
+            resultado = taxa
+            console.log(resultado)
+        })
+
+        loss.addEventListener("click", e => {
+            e.preventDefault()
+            let teste = taxa * 2
+            resultado += teste
+            console.log(resultado)
+        })
+        console.log(taxa)
+    </script>
 </body>
+
 </html>

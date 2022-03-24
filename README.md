@@ -1,2 +1,2 @@
 # Projeto-INFINIT
- Calculadora De Gerenciamento para Blaze
+ Calculadora De Gerenciamento

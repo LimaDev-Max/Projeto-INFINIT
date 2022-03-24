@@ -10,23 +10,22 @@ const taxas = [
         "CRASH25": [0.905, 0.1085, 0.1187]
     }
 ]
-
-
+//exibe a div do Modo Div 
 const rGerenciamento = gerenciamento.addEventListener("change", e => {
     modoDiv.style.display = "block"
-    const value = e.target.value
 })
 
-console.log(taxas[0].DAMABRANCO);
-
 proximo.addEventListener("click", (e) => {
+    // desabilita o redirecionamento automático do botão
     e.preventDefault()
+    
     const vGerenciamento = gerenciamento.value
     const vModo = modo.value
-    const resultado = taxas[0]
-    console.log(vGerenciamento,
-        vModo)
-    console.log(resultado.vGerenciamento)
+    const resultado = taxas[0][vGerenciamento][vModo]
+    //redireiciona somente se o select modo estiver selecionado
+    if(modo.value >=0 ){
+        window.location = `/index2.html?tax=${resultado}`
+    }
 })
 
 modo.addEventListener("change", e => {
