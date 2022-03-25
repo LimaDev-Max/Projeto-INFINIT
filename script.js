@@ -1,3 +1,4 @@
+
 const gerenciamento = document.getElementById('gerenciamento')
 const modo = document.getElementById('modo')
 const proximo = document.getElementById('proximo')
@@ -32,3 +33,4 @@ modo.addEventListener("change", e => {
     const value = e.target.value
     return value
 })
+
