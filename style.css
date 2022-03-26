@@ -9,8 +9,7 @@
 }
 
 body {
-    background: linear-gradient(45deg, #8e2de2, #4a00e0);
-    background-repeat: no-repeat;
+    background-color: #031319;
     min-height: 100vh;
     min-width: 100vw;
     display: flex;
@@ -41,7 +40,8 @@ main h2::before {
     bottom: 3px;
     left: 0;
     border-radius: 8px;
-    background: linear-gradient(45deg, #8e2de2, #4a00e0);
+    background: #EE0823;
+
 }
 
 form {
@@ -74,7 +74,8 @@ form .input-field:first-child {
     width: 100%;
     bottom: -5px;
     left: 0;
-    background: linear-gradient(45deg, #8e2de2, #4a00e0);
+    background: #EE0823;
+    background: linear-gradient(45deg, #EE0823, #031319);
     transform: scaleX(0);
     transition: all .3s ease-in-out;
     transform-origin: left;
@@ -99,7 +100,7 @@ form input[type="submit"] {
     margin-top: 2rem;
     padding: 0.4rem;
     width: 100%;
-    background: linear-gradient(to left, #4776E6, #8e54e9);
+    background: linear-gradient(to left, #EE0823, #031319e5);
     cursor: pointer;
     color: white;
     font-size: 0.9rem;
@@ -110,7 +111,7 @@ form input[type="submit"] {
 
 form input[type="submit"]:hover {
     letter-spacing: 0.5px;
-    background: linear-gradient(to right, #4776E6, #8e54e9);
+    background: linear-gradient(to right, #EE0823, #031319);
 }
 
 .footer {
